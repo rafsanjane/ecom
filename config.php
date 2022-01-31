@@ -6,7 +6,7 @@
 $server = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'ecom';
+$database = 'shopping_db';
 
 // Create connection
 
