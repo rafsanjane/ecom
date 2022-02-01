@@ -1,3 +1,5 @@
+<?php require_once __DIR__.'/../../config.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,4 +21,8 @@
 </head>
 
 <body>
-    <div id="app">
+<div id="app">
+
+<?php require_once __DIR__.'./sidebar.php'; ?>
+
+<div id="main">
