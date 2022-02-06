@@ -1,3 +1,3 @@
 <?php
 
-require_once __DIR__'frontend/home.php';
+require_once 'frontend/home.php';

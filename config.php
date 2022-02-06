@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // define('ROOT',__DIR__);
 
@@ -6,8 +6,8 @@
 $server = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'shopping_db';
+$database = 'ecom';
 
 // Create connection
 
-$connection = new mysqli($server,$username,$password,$database);
+$connection = new mysqli($server, $username, $password, $database);
