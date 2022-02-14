@@ -1,5 +1,7 @@
 <?php require_once __DIR__ . '/../partials/header.php' ?>
 
+
+
 <div class="card">
         <div class="card-header">
 			<a href="index.php">
