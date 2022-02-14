@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2022 at 05:04 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.5
+-- Generation Time: Feb 14, 2022 at 06:27 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -95,6 +95,14 @@ CREATE TABLE `product_categories` (
   `category_image` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `product_categories`
+--
+
+INSERT INTO `product_categories` (`category_id`, `category_name`, `category_slug`, `category_image`) VALUES
+(1, 'Gadget and Gear', 'Gadget-Gear', 'img/1644808203.webp'),
+(2, 'MENS Wearing', 'mens-wearing', 'img/1644809547.webp');
+
 -- --------------------------------------------------------
 
 --
@@ -121,8 +129,18 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `phone` varchar(18) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `social_login_token` varchar(70) NOT NULL
+  `social_login_token` varchar(70) NOT NULL,
+  `role` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `name`, `email`, `phone`, `password`, `social_login_token`, `role`) VALUES
+(1, 'Alex', 'Alex@gmail.com', '016000000', '1234', '', 'User'),
+(2, 'John Wick', 'john@gmail.com', '0180000000', '1234', '', 'Admin'),
+(3, 'Roxie J. Douglas', 'RoxieJDouglas@armyspy.com', '609-984-8503', '111', '', 'Seller');
 
 --
 -- Indexes for dumped tables
@@ -202,7 +220,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `product_categories`
 --
 ALTER TABLE `product_categories`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `shipping`
@@ -214,7 +232,7 @@ ALTER TABLE `shipping`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
