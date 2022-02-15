@@ -1,32 +1,55 @@
 <?php 
-require_once __DIR__.'/../../../config.php';
+    require_once __DIR__.'/../../../config.php';
 
 
     if(isset($_POST['submit'])){
-        $product_name = $_POST['product_name'];
-        $description = $_POST['description'];
-        $quantity = $_FILES['quantity'];
-        $price = $_FILES['price'];
-        $discount_price = $_FILES['discount_price'];
-
-        $feature_image 
         
-        $temp_location =  $image['tmp_name'];
+
+        $product_name = $_POST['product_name'];
+        $category_id = $_POST['category_id'];
+        $price = $_POST['price'];
+        $discount_price = $_POST['discount_price'];
+        $quantity = $_POST['quantity'];
+        $description = $_POST['description'];
+
+        $feature_image = $_FILES['feature_image'];
+        $gallery  = $_FILES['images'];
+
+        // freature image
+        $temp_location = $feature_image['tmp_name'];
         $image_name = 'img/'.time().'.webp';
         move_uploaded_file($temp_location,$image_name);
 
-
-        $sql = "INSERT INTO products (product_name, description, quantity, price, discount_price)
-        VALUES ('$name', '$slug', '$image_name')";
-        $result = $connection->query($sql);
-
-        if($result){
-            echo "Product inserted successfully";
-            header('location:../index.php');
-        }else{
-            echo "Query : $query <br><br> Error : $connection->error";
+       
+        // gallery images
+        $count_gallery = count($gallery['tmp_name']);
+        $gallery_image = [];
+        for ($i=0; $i < $count_gallery; $i++) {
+            $temp_location = $gallery['tmp_name'][$i];
+            $gallery_image[$i] = 'img/'.time().'.webp';
+            move_uploaded_file($temp_location,$gallery_image[$i]);
         }
 
-    }else{
-        header('location:../create.php');
+        $gallery_image = json_encode($gallery_image);
+
+
+        // user id generate
+        $user_id = rand(1,3);
+
+        $sql =    "INSERT INTO products (category_id,user_id,feature_image,gallery,product_name,description,quantity,price,discount_price)
+                    value ('$category_id','$user_id','$image_name','$gallery_image','$product_name','$description','$quantity','$price','$discount_price')";
+        $result = $connection->query($sql);
+
+        if ($result) {
+            echo "New User added Successfully";
+            header('location: ../index.php');
+        } else {
+            echo "Query:  $sql  <br><br> Error: $connection->error ";
+        }
+
+
+
+    } else{
+        header('location: /../create.php');
     }
+  ?>      

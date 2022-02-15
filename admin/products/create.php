@@ -49,7 +49,7 @@
                        </div>
                        <div class="col-md-12 form-group">
                            <label for="">Product Gallery</label>
-                           <div class="product-gallery"></div>
+                           <div class="product-gallery" name="gallery"></div>
                        </div>
                        <div class="col-md-12 form-group">
                            <label for="">Description</label>
