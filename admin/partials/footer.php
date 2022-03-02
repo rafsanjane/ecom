@@ -13,11 +13,7 @@
 
 
 
-<script>
 
-$('.product-gallery').imageUploader();
-
-</script>
 </body>
 
 </html>

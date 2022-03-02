@@ -8,6 +8,7 @@ if (isset($_GET['id'])) :
         $user_data = $connection->query($sql);
 
         foreach ($user_data as $row) {
+               $role =  $row['role'];
         }
 else :
         return header('location: index.php');
@@ -54,16 +55,40 @@ endif;
                                                         <label>Role</label>
                                                 </div>
                                                 <div class="col-md-8 form-group">
-                                                        <select name="role" id="" class="form-control" required>
-                                                                <option value="Admin">Admin</option>
-                                                                <option value="User">User</option>
-                                                                <option value="Editor">Editor</option>
-                                                                <option value="Seller">Seller</option>
-                                                        </select>
+                                                <select name="role" id="" class="form-control" required>
+                                                        <option value="Admin" 
+                                                            <?php 
+                                                                if($role=='Admin'):
+                                                                    echo "selected";
+                                                                endif;
+                                                            ?>
+                                                            >Admin</option>
+                                                        <option value="User"
+                                                            <?php 
+                                                                if($role=='User'):
+                                                                    echo "selected";
+                                                                endif;
+                                                            ?>
+                                                        > User</option>
+                                                        <option value="Editor"
+                                                            <?php 
+                                                                if($role=='Editor'):
+                                                                    echo "selected";
+                                                                endif;
+                                                            ?>
+                                                        >Editor</option>
+                                                        <option value="Seller"
+                                                            <?php 
+                                                                if($role=='Seller'):
+                                                                    echo "selected";
+                                                                endif;
+                                                            ?>
+                                                        >Seller</option>
+                                                    </select>
                                                 </div>
                                                 <input type="hidden" name="user_id" value="<?php echo $id ?>">
                                                 <div class="col-sm-12 d-flex justify-content-end">
-                                                        <button type="submit" class="btn btn-primary me-1 mb-1" name="submit">Update</button>
+                                                        <button type="submit" class="btn btn-primary me-1 mb-1" name="update">Update</button>
 
                                                 </div>
                                         </div>

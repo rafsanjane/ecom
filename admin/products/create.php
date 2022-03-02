@@ -73,3 +73,9 @@
 
 
 <?php require_once '../partials/footer.php' ?>
+
+<script>
+
+$('.product-gallery').imageUploader();
+
+</script>

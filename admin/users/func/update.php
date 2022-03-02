@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../../../config.php';
 
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['update'])) {
 
     $name = $_POST['name'];
     $email = $_POST['email'];
