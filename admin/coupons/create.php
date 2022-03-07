@@ -35,10 +35,10 @@
                                                         <label>Coupon Type</label>
                                                 </div>
                                                 <div class="col-md-8 form-group">
-                                                    <select name="type" id="" class="form-control" required>
-                                                        <option value="Percent">Percent</option>
-                                                        <option value="Ammount">Ammount</option>
-                                                    </select>
+                                                        <select name="type" id="" class="form-control" required>
+                                                                <option value="Percent">Percent</option>
+                                                                <option value="Ammount">Ammount</option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-sm-12 d-flex justify-content-end">
                                                         <button type="submit" class="btn btn-primary me-1 mb-1" name="submit">Save</button>

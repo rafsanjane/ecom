@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "/../partials/header.php"?>
+<?php require_once __DIR__ . "/../partials/header.php" ?>
 
 
 <?php
@@ -26,25 +26,25 @@ $coupons = $connection->query($sql);
                 <tbody>
                     <?php
                     $serial_num = 1;
-                        foreach ($coupons as $row) :
+                    foreach ($coupons as $row) :
                     ?>
-                    <tr>
-                        <td scope="col"><?php echo $serial_num++ ?></td>
-                        <td scope="col"><?php echo $row['coupon_code']; ?></td>
-                        <td scope="col"><?php echo $row['ammount'] ?  $row['ammount'] :  $row['percent'] ?> </td>
-                        <td scope="col">
-                            <a href="edit.php?id=<?php echo $row['coupon_id']; ?>">
-                            <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
-                            </a> 
-                            
-                            <a href="func/delete.php?id=<?php echo $row['coupon_id']; ?>">
-                            <button class="btn btn-danger"><i class="bi bi-archive-fill"></i></button>
-                            </a>
-                        </td>
-                    </tr>
-                            
+                        <tr>
+                            <td scope="col"><?php echo $serial_num++ ?></td>
+                            <td scope="col"><?php echo $row['coupon_code']; ?></td>
+                            <td scope="col"><?php echo $row['ammount'] ?  $row['ammount'] :  $row['percent'] ?> </td>
+                            <td scope="col">
+                                <a href="edit.php?id=<?php echo $row['coupon_id']; ?>">
+                                    <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                                </a>
+
+                                <a href="func/delete.php?id=<?php echo $row['coupon_id']; ?>">
+                                    <button class="btn btn-danger"><i class="bi bi-archive-fill"></i></button>
+                                </a>
+                            </td>
+                        </tr>
+
                     <?php
-                        endforeach;
+                    endforeach;
                     ?>
                 </tbody>
             </table>
@@ -54,5 +54,5 @@ $coupons = $connection->query($sql);
 
 
 
-<?php require_once '../partials/js_scripts.php' ?>
+<?php require_once  '../partials/js_scripts.php' ?>
 <?php require_once __DIR__ . '/../partials/footer.php'; ?>

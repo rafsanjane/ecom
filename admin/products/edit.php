@@ -24,7 +24,7 @@ endif;
 
 ?>
 
-<div class="card" style="">
+<div class="card">
     <div class="card-header">
         <a href="index.php">
             <button class="btn btn-primary"><i class="bi bi-back"> Back</i></button>
@@ -117,15 +117,13 @@ endif;
 
     }
 
-
     $('.product-gallery').imageUploader({
         preloaded: preloaded,
         imagesInputName: 'images',
         preloadedInputName: 'old',
-        maxSize: 2 * 1024 * 1024,
-        maxFiles: 10
+
     });
 </script>
 
 
-<?php require_once '../partials/footer.php' ?>
+<?php require_once __DIR__ . '../partials/footer.php' ?>

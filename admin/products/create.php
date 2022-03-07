@@ -8,7 +8,7 @@ $categories = $connection->query($sql);
 
 ?>
 
-<div class="card" style="">
+<div class="card">
     <div class="card-header">
         <a href="index.php">
             <button class="btn btn-primary"><i class="bi bi-back"> Back</i></button>
@@ -67,16 +67,17 @@ $categories = $connection->query($sql);
 </div>
 
 
-<script>
-    CKEDITOR.replace('description');
-</script>
+
 
 <?php require_once '../partials/js_scripts.php' ?>
-
-
 <script>
     $('.product-gallery').imageUploader();
 </script>
 
-<?php require_once '../partials/footer.php' ?>
+<script>
+    CKEDITOR.replace('description');
+</script>
 
+
+
+<?php require_once '../partials/footer.php'; ?>
