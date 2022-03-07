@@ -54,7 +54,7 @@ if(isset($_GET['id'])){
                                                     </select>
                                                 </div>
                                                 <div class="col-sm-12 d-flex justify-content-end">
-                                                        <button type="submit" class="btn btn-primary me-1 mb-1" name="submit">Save</button>
+                                                        <button type="submit" class="btn btn-primary me-1 mb-1" name="submit">Update</button>
                                                         <!-- <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button> -->
                                                 </div>
                                         </div>

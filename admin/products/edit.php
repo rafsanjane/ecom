@@ -89,20 +89,16 @@ endif;
 </div>
 
 
-<<<<<<< HEAD
 
 
 
 <?php require_once '../partials/js_scripts.php' ?>
 
-=======
->>>>>>> 7313b7c33a315e9ddc3cab945dbea29126a927ce
 <script>
     CKEDITOR.replace('description');
 </script>
 
 
-<<<<<<< HEAD
 <script>
     const galleryImage = <?php echo $row['gallery']; ?>;
 
@@ -119,27 +115,11 @@ endif;
 
         preloaded.push(object);
 
-=======
-<?php require_once '../partials/footer.php' ?>
-<script>
-    const galleryImage = <?php echo $row['gallery'] ?>;
-
-    let preloaded = [];
-    let countImages = galleryImage.length;
-    for (let index = 0; index < countImages; index++) {
-        const element = galleryImage[index];
-        let object = {
-            id: index,
-            src: 'func/' + galleryImage[index]
-        };
-        preloaded.push(object);
->>>>>>> 7313b7c33a315e9ddc3cab945dbea29126a927ce
     }
 
 
     $('.product-gallery').imageUploader({
         preloaded: preloaded,
-<<<<<<< HEAD
         imagesInputName: 'images',
         preloadedInputName: 'old',
         maxSize: 2 * 1024 * 1024,
@@ -149,8 +129,3 @@ endif;
 
 
 <?php require_once '../partials/footer.php' ?>
-=======
-        preloadedInputName: 'old'
-    });
-</script>
->>>>>>> 7313b7c33a315e9ddc3cab945dbea29126a927ce
