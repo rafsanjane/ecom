@@ -3,8 +3,8 @@
 <?php
 
 // retrive prodcut category
-    $sql = "SELECT * FROM product_categories";
-    $categories = $connection->query($sql);
+$sql = "SELECT * FROM product_categories";
+$categories = $connection->query($sql);
 
 ?>
 
@@ -19,42 +19,42 @@
             <form class="form form-horizontal" method="post" action="func/create.php" enctype="multipart/form-data">
                 <div class="form-body">
                     <div class="row">
-                       <div class="col-md-6 form-group">
-                           <label for="">Product Name</label>
-                           <input type="text" class="form-control" name="product_name">
-                       </div>
-                       <div class="col-md-6 form-group">
-                           <label for="">Product Category</label>
-                           <select class="form-control" name="category_id">
-                               <?php foreach ($categories as $category): ?>
-                                <option value="<?php echo $category['category_id'];?>"><?php echo $category['category_name'];?></option>
+                        <div class="col-md-6 form-group">
+                            <label for="">Product Name</label>
+                            <input type="text" class="form-control" name="product_name">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="">Product Category</label>
+                            <select class="form-control" name="category_id">
+                                <?php foreach ($categories as $category) : ?>
+                                    <option value="<?php echo $category['category_id']; ?>"><?php echo $category['category_name']; ?></option>
                                 <?php endforeach; ?>
                             </select>
-                       </div>
-                       <div class="col-md-6 form-group">
-                           <label for="">Price</label>
-                           <input type="text" class="form-control" name="price">
-                       </div>
-                       <div class="col-md-6 form-group">
-                           <label for="">Discount Price</label>
-                           <input type="text" class="form-control" name="discount_price">
-                       </div>
-                       <div class="col-md-6 form-group">
-                           <label for="">Product Quantity</label>
-                           <input type="number" class="form-control" name="quantity">
-                       </div>
-                       <div class="col-md-6 form-group">
-                           <label for="">Feature Image</label>
-                           <input type="file" class="form-control" name="feature_image">
-                       </div>
-                       <div class="col-md-12 form-group">
-                           <label for="">Product Gallery</label>
-                           <div class="product-gallery" name="gallery"></div>
-                       </div>
-                       <div class="col-md-12 form-group">
-                           <label for="">Description</label>
-                           <textarea class="form-control" name="description" id="" cols="30" rows="6"></textarea>
-                       </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="">Price</label>
+                            <input type="text" class="form-control" name="price">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="">Discount Price</label>
+                            <input type="text" class="form-control" name="discount_price">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="">Product Quantity</label>
+                            <input type="number" class="form-control" name="quantity">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="">Feature Image</label>
+                            <input type="file" class="form-control" name="feature_image">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="">Product Gallery</label>
+                            <div class="product-gallery" name="images"></div>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="">Description</label>
+                            <textarea class="form-control" name="description" id="" cols="30" rows="6"></textarea>
+                        </div>
                         <div class="col-sm-12 d-flex justify-content-end">
                             <button type="submit" class="btn btn-primary me-1 mb-1" name="submit">Create</button>
                             <!-- <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button> -->
@@ -68,8 +68,15 @@
 
 
 <script>
-    CKEDITOR.replace( 'description' );
+    CKEDITOR.replace('description');
 </script>
 
+
+<?php require_once '../partials/js_scripts.php' ?>
+
+
+<script>
+    $('.product-gallery').imageUploader();
+</script>
 
 <?php require_once '../partials/footer.php' ?>

@@ -70,5 +70,5 @@
 
 
 
-
+<?php require_once '../partials/js_scripts.php' ?>
 <?php require_once '../partials/footer.php' ?>

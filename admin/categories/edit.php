@@ -1,26 +1,25 @@
 <?php require_once __DIR__ . '/../partials/header.php' ?>
 <?php
-    if(isset($_GET['id'])){
+if (isset($_GET['id'])) {
 
         $id = $_GET['id'];
-        $sql ="SELECT * FROM `product_categories` WHERE `category_id` = $id";
+        $sql = "SELECT * FROM `product_categories` WHERE `category_id` = $id";
 
-	$data = $connection->query($sql);
-        foreach($data as $row){
-            $category_name = $row['category_name'];
-            $category_slug = $row['category_slug'];
+        $data = $connection->query($sql);
+        foreach ($data as $row) {
+                $category_name = $row['category_name'];
+                $category_slug = $row['category_slug'];
         }
-
-    }else{
+} else {
         return header('location: index.php');
-    }
+}
 ?>
 <div class="card">
         <div class="card-header">
-			<a href="index.php">
-            <button class="btn btn-primary"><i class="bi bi-back"> Back</i></button>
-			</a>
-		</div>
+                <a href="index.php">
+                        <button class="btn btn-primary"><i class="bi bi-back"> Back</i></button>
+                </a>
+        </div>
         <div class="card-content">
                 <div class="card-body">
                         <form class="form form-horizontal" method="post" action="func/update.php" enctype="multipart/form-data">
@@ -58,5 +57,5 @@
 </div>
 
 
-
+<?php require_once '../partials/js_scripts.php' ?>
 <?php require_once '../partials/footer.php' ?>

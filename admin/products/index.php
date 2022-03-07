@@ -33,15 +33,15 @@ $products = $connection->query($sql);
                     ?>
                             <tr>
                                 <td scope="col"><?php echo $serial_num++; ?></td>
-                                <td scope="col"><?php echo $row['product_name']; ?></td>
+                                <td scope="col" style="width:40%;"><?php echo $row['product_name']; ?></td>
                                 <td scope="col" style="text-align:center">
-                                    <img src="func/<?php echo $row['feature_image']; ?>" alt=""  width="220px" height="220px">
+                                    <img src="func/<?php echo $row['feature_image']; ?>" alt="" width="220px" height="220px">
                                 </td>
-                                
-                                <td scope="col"><?php echo $row['price']; ?></td>
-                                <td scope="col"><?php echo $row['quantity']; ?></td>
 
-                                <td>
+                                <td scope="col" style="text-align:center"><?php echo $row['price']; ?></td>
+                                <td scope="col" style="text-align:center"><?php echo $row['quantity']; ?></td>
+
+                                <td style="text-align:center">
                                     <a href="edit.php?id=<?php echo $row['product_id']; ?>">Edit</a> | <a href="func/delete.php?id=<?php echo $row['product_id']; ?>">Delete</a>
                                 </td>
                             </tr>
@@ -58,5 +58,5 @@ $products = $connection->query($sql);
 
 
 
-
+<?php require_once '../partials/js_scripts.php' ?>
 <?php require_once __DIR__ . '/../partials/footer.php'; ?>

@@ -14,22 +14,31 @@
                                 <div class="form-body">
                                         <div class="row">
                                                 <div class="col-md-4">
-                                                        <label>Name</label>
+                                                        <label>Coupon code</label>
                                                 </div>
                                                 <div class="col-md-8 form-group">
-                                                        <input type="text" id="first-name" class="form-control" name="category_name" placeholder="Ex: Winter Cloth">
+                                                        <input type="text" id="first-name" class="form-control" name="coupon_code" placeholder="Ex: NewYear22">
                                                 </div>
                                                 <div class="col-md-4">
-                                                        <label>Slug</label>
+                                                        <label>Percent %</label>
                                                 </div>
                                                 <div class="col-md-8 form-group">
-                                                        <input type="text" id="email-id" class="form-control" name="category_slug" placeholder="Ex: winter-cloth">
+                                                        <input type="text" id="email-id" class="form-control" name="percent" placeholder="Ex: 0%">
                                                 </div>
                                                 <div class="col-md-4">
-                                                        <label>Image</label>
+                                                        <label>Amount TK</label>
                                                 </div>
                                                 <div class="col-md-8 form-group">
-                                                        <input type="file" id="contact-info" class="form-control" name="category_image">
+                                                        <input type="text" id="contact-info" class="form-control" name="ammount" placeholder="Ex: 50">
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <label>Coupon Type</label>
+                                                </div>
+                                                <div class="col-md-8 form-group">
+                                                    <select name="type" id="" class="form-control" required>
+                                                        <option value="Percent">Percent</option>
+                                                        <option value="Ammount">Ammount</option>
+                                                    </select>
                                                 </div>
                                                 <div class="col-sm-12 d-flex justify-content-end">
                                                         <button type="submit" class="btn btn-primary me-1 mb-1" name="submit">Save</button>

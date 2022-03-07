@@ -55,5 +55,5 @@ $user_data = $connection->query($sql);
 </div>
 
 
-
+<?php require_once '../partials/js_scripts.php' ?>
 <?php require_once __DIR__ . '/../partials/footer.php'; ?>

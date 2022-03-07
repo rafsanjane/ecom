@@ -33,6 +33,12 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
+                    <a href="../coupons/" class='sidebar-link'>
+                        <i class="bi bi-basket3"></i>
+                        <span>Coupons</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
                     <a href="../users/" class='sidebar-link'>
                         <i class="bi bi-person"></i>
                         <span>Users</span>

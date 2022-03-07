@@ -1,6 +1,19 @@
 <?php require_once __DIR__ . '/../partials/header.php' ?>
+<?php 
 
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
 
+    $sql = "SELECT * FROM coupons WHERE coupon_id='$id'";
+    $data = $connection->query($sql);
+
+    foreach ($data as $row) {
+        
+        
+    }
+}
+
+?>
 
 <div class="card">
         <div class="card-header">
@@ -14,22 +27,31 @@
                                 <div class="form-body">
                                         <div class="row">
                                                 <div class="col-md-4">
-                                                        <label>Name</label>
+                                                        <label>Coupon code</label>
                                                 </div>
                                                 <div class="col-md-8 form-group">
-                                                        <input type="text" id="first-name" class="form-control" name="category_name" placeholder="Ex: Winter Cloth">
+                                                        <input type="text" class="form-control" name="coupon_code" value="<?php echo $row['coupon_code'] ?>">
                                                 </div>
                                                 <div class="col-md-4">
-                                                        <label>Slug</label>
+                                                        <label>Percent %</label>
                                                 </div>
                                                 <div class="col-md-8 form-group">
-                                                        <input type="text" id="email-id" class="form-control" name="category_slug" placeholder="Ex: winter-cloth">
+                                                        <input type="text"  class="form-control" name="percent" value="<?php echo $row['percent'] ?>">
                                                 </div>
                                                 <div class="col-md-4">
-                                                        <label>Image</label>
+                                                        <label>Amount TK</label>
                                                 </div>
                                                 <div class="col-md-8 form-group">
-                                                        <input type="file" id="contact-info" class="form-control" name="category_image">
+                                                        <input type="text"  class="form-control" name="ammount" value="<?php echo $row['ammount'] ?>">
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <label>Coupon Type</label>
+                                                </div>
+                                                <div class="col-md-8 form-group">
+                                                    <select name="type" id="" class="form-control" required>
+                                                        <option value="Percent" <?php echo $row['select_type']=='Percent'? "selected" : "" ?>>Percent</option>
+                                                        <option value="Ammount" <?php echo $row['select_type']=='Ammount'? "selected" : "" ?> >Ammount</option>
+                                                    </select>
                                                 </div>
                                                 <div class="col-sm-12 d-flex justify-content-end">
                                                         <button type="submit" class="btn btn-primary me-1 mb-1" name="submit">Save</button>

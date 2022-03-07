@@ -1,4 +1,4 @@
-<?php require_once __DIR__.'/../../config.php' ?>
+<?php require_once __DIR__ . '/../../config.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="./../assets/css/bootstrap.css">
 
     <link rel="stylesheet" href="./../assets/vendors/iconly/bold.css">
@@ -19,16 +19,16 @@
     <link rel="stylesheet" href="./../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="./../assets/css/app.css">
     <link rel="shortcut icon" href="./../assets/images/favicon.svg" type="image/x-icon">
-    <script src="https://cdn.ckeditor.com/4.17.2/standard/ckeditor.js"></script>
+    <script src="../assets/js/extensions/des_eitor.js"></script>
 
-    <link type="text/css" rel="stylesheet" href="https://christianbayer.github.io/image-uploader/dist/image-uploader.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/img_uploader/image-uploader.min.css">
 
-    
+
 </head>
 
 <body>
-<div id="app">
+    <div id="app">
 
-<?php require_once __DIR__.'./sidebar.php'; ?>
+        <?php require_once __DIR__ . './sidebar.php'; ?>
 
-<div id="main">
+        <div id="main">

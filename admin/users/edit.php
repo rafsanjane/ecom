@@ -55,10 +55,26 @@ endif;
                                                 </div>
                                                 <div class="col-md-8 form-group">
                                                         <select name="role" id="" class="form-control" required>
-                                                                <option value="Admin">Admin</option>
-                                                                <option value="User">User</option>
-                                                                <option value="Editor">Editor</option>
-                                                                <option value="Seller">Seller</option>
+                                                                <option value="User" <?php
+                                                                                        if ($row['role'] == 'User') :
+                                                                                                echo "selected";
+                                                                                        endif;
+                                                                                        ?>>User</option>
+                                                                <option value="Seller" <?php
+                                                                                        if ($row['role']  == 'Seller') :
+                                                                                                echo "selected";
+                                                                                        endif;
+                                                                                        ?>> Seller</option>
+                                                                <option value="Admin" <?php
+                                                                                        if ($row['role']  == 'Admin') :
+                                                                                                echo "selected";
+                                                                                        endif;
+                                                                                        ?>>Admin</option>
+                                                                <option value="Editor" <?php
+                                                                                        if ($row['role']  == 'Editor') :
+                                                                                                echo "selected";
+                                                                                        endif;
+                                                                                        ?>>Admin</option>
                                                         </select>
                                                 </div>
                                                 <input type="hidden" name="user_id" value="<?php echo $id ?>">
@@ -74,5 +90,5 @@ endif;
 </div>
 
 
-
+<?php require_once '../partials/js_scripts.php' ?>
 <?php require_once '../partials/footer.php' ?>
