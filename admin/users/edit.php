@@ -55,7 +55,6 @@ endif;
                                                         <label>Role</label>
                                                 </div>
                                                 <div class="col-md-8 form-group">
-<<<<<<< HEAD
                                                         <select name="role" id="" class="form-control" required>
                                                                 <option value="User" <?php
                                                                                         if ($row['role'] == 'User') :
@@ -78,38 +77,6 @@ endif;
                                                                                         endif;
                                                                                         ?>>Admin</option>
                                                         </select>
-=======
-                                                <select name="role" id="" class="form-control" required>
-                                                        <option value="Admin" 
-                                                            <?php 
-                                                                if($role=='Admin'):
-                                                                    echo "selected";
-                                                                endif;
-                                                            ?>
-                                                            >Admin</option>
-                                                        <option value="User"
-                                                            <?php 
-                                                                if($role=='User'):
-                                                                    echo "selected";
-                                                                endif;
-                                                            ?>
-                                                        > User</option>
-                                                        <option value="Editor"
-                                                            <?php 
-                                                                if($role=='Editor'):
-                                                                    echo "selected";
-                                                                endif;
-                                                            ?>
-                                                        >Editor</option>
-                                                        <option value="Seller"
-                                                            <?php 
-                                                                if($role=='Seller'):
-                                                                    echo "selected";
-                                                                endif;
-                                                            ?>
-                                                        >Seller</option>
-                                                    </select>
->>>>>>> 7313b7c33a315e9ddc3cab945dbea29126a927ce
                                                 </div>
                                                 <input type="hidden" name="user_id" value="<?php echo $id ?>">
                                                 <div class="col-sm-12 d-flex justify-content-end">

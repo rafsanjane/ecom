@@ -71,8 +71,6 @@ $categories = $connection->query($sql);
     CKEDITOR.replace('description');
 </script>
 
-
-<<<<<<< HEAD
 <?php require_once '../partials/js_scripts.php' ?>
 
 
@@ -81,12 +79,4 @@ $categories = $connection->query($sql);
 </script>
 
 <?php require_once '../partials/footer.php' ?>
-=======
-<?php require_once '../partials/footer.php' ?>
 
-<script>
-
-$('.product-gallery').imageUploader();
-
-</script>
->>>>>>> 7313b7c33a315e9ddc3cab945dbea29126a927ce
