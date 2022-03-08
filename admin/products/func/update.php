@@ -4,7 +4,7 @@ require_once __DIR__ . '/../../../config.php';
 
 if (isset($_POST['submit'])) {
 
-    $product_id = $_POST['product_id'];
+    $product_id = $_GET['id'];
     $product_name = $_POST['product_name'];
     $category_id = $_POST['category_id'];
     $price = $_POST['price'];

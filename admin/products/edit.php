@@ -32,7 +32,7 @@ endif;
     </div>
     <div class="card-content">
         <div class="card-body">
-            <form class="form form-horizontal" method="post" action="func/update.php" enctype="multipart/form-data">
+            <form class="form form-horizontal" method="post" action="func/update.php?id=<?php echo $id ?>" enctype="multipart/form-data">
                 <div class="form-body">
                     <div class="row">
                         <div class="col-md-6 form-group">
@@ -90,13 +90,13 @@ endif;
 
 
 
-
-
-<?php require_once '../partials/js_scripts.php' ?>
-
 <script>
     CKEDITOR.replace('description');
 </script>
+
+<?php require_once '../partials/js_scripts.php' ?>
+
+
 
 
 <script>

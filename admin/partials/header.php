@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="./../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="./../assets/css/app.css">
     <link rel="shortcut icon" href="./../assets/images/favicon.svg" type="image/x-icon">
-    <script src="../assets/js/extensions/des_eitor.js"></script>
+    <script src="./../assets/js/extensions/ckeditor4-master/ckeditor.js"></script>
 
-    <link type="text/css" rel="stylesheet" href="../assets/css/img_uploader/image-uploader.min.css">
+    <link type="text/css" rel="stylesheet" href="./../assets/css/img_uploader/image-uploader.min.css">
 
 
 </head>

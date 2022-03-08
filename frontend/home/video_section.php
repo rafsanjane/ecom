@@ -31,14 +31,14 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-10">
                     <div class="choice-watch-img mb-40">
-                        <img src="frontend/assets/img/gallery/choce_watch1.png" alt="">
+                        <img src="../frontend/assets/img/gallery/choce_watch1.png" alt="">
                     </div>
                 </div>
             </div>
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 col-md-6 col-sm-10">
                     <div class="choice-watch-img mb-40">
-                        <img src="frontend/assets/img/gallery/choce_watch2.png" alt="">
+                        <img src="../frontend/assets/img/gallery/choce_watch2.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6">
