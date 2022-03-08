@@ -36,23 +36,23 @@ if (isset($_POST['submit'])) {
     //     $_FILES['feature_image'] = $existing_feature_image;
     // }
 
-     // gallery images
+    // gallery images
 
     $sql = "SELECT gallery FROM products WHERE product_id = '$product_id'";
     $data = $connection->query($sql);
 
     foreach ($data  as $value) {
-         $existing_gallery = json_decode($value['gallery']);
+        $existing_gallery = json_decode($value['gallery']);
     }
 
-     $old_gallery_count = count($existing_gallery);
+    $old_gallery_count = count($existing_gallery);
 
 
-    if(isset($_REQUEST['old']) || isset($_FILES['images'])){
+    if (isset($_REQUEST['old']) || isset($_FILES['images'])) {
 
-        for ($i=0; $i < $old_gallery_count ; $i++) { 
+        for ($i = 0; $i < $old_gallery_count; $i++) {
 
-            if(!in_array($i,($_REQUEST['old']))){
+            if (!in_array($i, ($_REQUEST['old']))) {
 
                 unlink($existing_gallery[$i]); // delete image from directory
                 unset($existing_gallery[$i]); // remove array item from gallery image
@@ -60,21 +60,20 @@ if (isset($_POST['submit'])) {
             }
         }
 
-        if(isset($_FILES['images'])){
+        if (isset($_FILES['images'])) {
             $gallery = $_FILES['images'];
             // gallery image 
             $count_gallery = count($gallery['tmp_name']);
             $gallery_image = [];
-            for ($i=0; $i < $count_gallery ; $i++) { 
+            for ($i = 0; $i < $count_gallery; $i++) {
                 $temp_location[$i] =  $gallery['tmp_name'][$i];
-                $gallery_image[$i] = 'img/'.time().'.webp';
-                move_uploaded_file($temp_location[$i],$gallery_image[$i]);
+                $gallery_image[$i] = 'img/' . time() . '.webp';
+                move_uploaded_file($temp_location[$i], $gallery_image[$i]);
 
-                array_push($existing_gallery,$gallery_image[$i]); // push new image on exiisting images array
+                array_push($existing_gallery, $gallery_image[$i]); // push new image on exiisting images array
             }
             $gallery_image = json_encode($existing_gallery);
-
-       }
+        }
     }
 
 
@@ -91,12 +90,12 @@ if (isset($_POST['submit'])) {
 
     $result = $connection->query($sql);
 
-    
+
     if ($result) {
         echo "Product Updated Successfully";
         header('location: ../index.php');
     } else {
-        echo "Query:  $sql  <br><br> Error: $connection->error ";
+        echo "Query:  $sql  <br><br> Error: $connection->error";
     }
 } else {
     header('location:../edit.php');

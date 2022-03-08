@@ -21,7 +21,7 @@ if (isset($_GET['id'])) {
         </div>
         <div class="card-content">
                 <div class="card-body">
-                        <form class="form form-horizontal" method="post" action="func/update.php" enctype="multipart/form-data">
+                        <form class="form form-horizontal" method="post" action="func/update.php?id=<?php echo $id; ?>" enctype="multipart/form-data">
                                 <div class="form-body">
                                         <div class="row">
                                                 <div class="col-md-4">
@@ -47,8 +47,8 @@ if (isset($_GET['id'])) {
                                                 </div>
                                                 <div class="col-md-8 form-group">
                                                         <select name="type" id="" class="form-control" required>
-                                                                <option value="Percent" <?php echo $row['select_type'] == 'Percent' ? "selected" : "" ?>>Percent</option>
-                                                                <option value="Ammount" <?php echo $row['select_type'] == 'Ammount' ? "selected" : "" ?>>Ammount</option>
+                                                                <option value="Percent" <?php echo $row['select_type'] == 'Percent' ? "selected" : ""; ?>>Percent</option>
+                                                                <option value="Ammount" <?php echo $row['select_type'] == 'Ammount' ? "selected" : ""; ?>>Ammount</option>
                                                         </select>
                                                 </div>
                                                 <div class="col-sm-12 d-flex justify-content-end">
