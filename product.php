@@ -32,7 +32,7 @@ if (isset($_REQUEST['id'])) :
                             for ($i = 0; $i < $product_gallery_count; $i++) :
                             ?>
                                 <div class="single_product_img">
-                                    <img src="admin/products/func/<?php echo $product_gallery[$i]; ?>" alt="#" class="img-fluid">
+                                    <img src="admin/products/func/<?php echo $product_gallery[$i]; ?>" alt="#" class="img-fluid" >
                                 </div>
                             <?php endfor ?>
                         </div>

@@ -1,0 +1,1 @@
+<?php echo ucwords(str_replace('-',' ',$_REQUEST['category'])); ?>

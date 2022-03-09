@@ -2312,8 +2312,8 @@ input:focus::-moz-placeholder {
 }
 
 .latest-padding {
-    padding-top: 190px;
-    padding-bottom: 135px
+    padding-top: 75px;
+    padding-bottom: 75px
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -2352,8 +2352,8 @@ input:focus::-moz-placeholder {
 }
 
 .footer-padding {
-    padding-top: 150px;
-    padding-bottom: 120px
+    padding-top: 75px;
+    padding-bottom: 75px
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -3170,7 +3170,7 @@ input:hover, input:focus {
 
 .slider-height2 {
     background-image: url(../img/hero/about_hero.png);
-    min-height: 500px;
+    min-height: 200px;
     background-repeat: no-repeat;
     background-position: center center
 }

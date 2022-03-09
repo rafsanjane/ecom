@@ -53,6 +53,7 @@
                                 <ul id="navigation">
                                     <li><a href="index.php">Home</a></li>
                                     <li><a href="shop.php">shop</a></li>
+                                    <li><a href="categories.php">Category</a></li>
                                     <li><a href="about.php">about</a></li>
                                     <li class="hot"><a href="#">Latest</a>
                                         <ul class="submenu">
