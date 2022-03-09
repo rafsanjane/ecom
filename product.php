@@ -37,25 +37,27 @@ if (isset($_REQUEST['id'])) :
                             <?php endfor ?>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="single_product_text text-center">
+                    <div class="col-lg-10">
+                        <div class="single_product_text ">
                             <h3><?php echo $product['product_name']; ?></h3>
                             <p>
                                 <?php echo $product['description'] ?>
                             </p>
-                            <div class="card_area">
+                            <div class="card_area ">
                                 <div class="product_count_area">
-                                    <p>Quantity</p>
+                                    <p class="fs-4">Quantity</p>
                                     <div class="product_count d-inline-block">
                                         <span class="product_count_item inumber-decrement"> <i class="ti-minus"></i></span>
                                         <input class="product_count_item input-number" type="text" value="1" min="0" max="10">
                                         <span class="product_count_item number-increment"> <i class="ti-plus"></i></span>
                                     </div>
-                                    <p>$5</p>
+                                    <p class="fs-3" ><?php echo $product['discount_price']; ?></p>
+                                    <p style="margin-bottom:0;">&nbsp;<del style="color:#828bb2; margin-bottom:0 !important;"><?php echo $product['price']; ?></del></p>
+                                    
                                 </div>
 
                                 <!-- add to cart -->
-                                <div class="add_to_cart">
+                                <div class="add_to_cart text-center">
                                     <a href="cart_process.php?product_id=<?php echo $product['product_id'] ?>" class="btn_3">
                                         <span>Add to cart</span>
                                     </a>
@@ -78,7 +80,7 @@ if (isset($_REQUEST['id'])) :
     </main>
 <?php
 else :
-    echo "<p class='p-4 text-center'>There is no product</p>";
+    echo "<div style='text-align:center;' ><img  src='frontend/assets/img/no-product-found.png' alt='no-product-found' srcset=''></div>";
 
 endif ?>
 <?php require_once 'frontend/partials/footer.php'; ?>
