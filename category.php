@@ -27,13 +27,13 @@ if (isset($_REQUEST['category'])) :
      foreach($products as $product){
     }
 
-    var_dump($cat);
-    echo "</br>";
-    print_r($cat);
+    // var_dump($cat);
+    // echo "</br>";
+    // print_r($cat);
 
-    $productss = count($cat);
-    echo $productss;
-    exit;
+    // $productss = count($cat);
+    // echo $productss;
+    // exit;
 ?>
 
 <main>
