@@ -21,6 +21,7 @@ if (isset($_REQUEST['id'])) :
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
+                    <h3 class="mb-4"><?php echo $product['product_name']; ?></h3>
                         <div class="product_img_slide owl-carousel">
                             <!-- product gallery image processing -->
                             <?php
@@ -31,8 +32,9 @@ if (isset($_REQUEST['id'])) :
 
                             for ($i = 0; $i < $product_gallery_count; $i++) :
                             ?>
+
                                 <div class="single_product_img">
-                                    <img src="admin/products/func/<?php echo $product_gallery[$i]; ?>" alt="#" class="img-fluid" >
+                                    <img src="admin/products/func/<?php echo $product_gallery[$i]; ?>" alt="#" height="366px" class="img-fluid" >
                                 </div>
                             <?php endfor ?>
                         </div>

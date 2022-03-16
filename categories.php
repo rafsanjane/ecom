@@ -4,7 +4,7 @@
 
 
 
-    // query for product
+    // query from product
     $sql = "SELECT * FROM product_categories";
 
     $categories = $connection->query($sql);
